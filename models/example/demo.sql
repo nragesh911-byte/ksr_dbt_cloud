@@ -1,0 +1,1 @@
+select * from demo_DB.demo_schema.emp_data
