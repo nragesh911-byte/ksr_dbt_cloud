@@ -1,7 +1,7 @@
 {{
     config(
         materialized='table',
-        transient = true,
+        transient = false,
         query_tag = 'DBT'
     )
 }}
