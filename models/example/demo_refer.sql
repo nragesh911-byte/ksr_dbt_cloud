@@ -2,6 +2,8 @@
     config(
         materialized='table',
         transient = false,
+        database = 'DBT_DB',
+        schemaa = 'RAW_SCHEMA',
         query_tag = 'DBT'
     )
 }}
