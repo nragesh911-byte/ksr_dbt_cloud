@@ -40,3 +40,15 @@ models:
     # Applies to all files under models/example/
     example:
       +materialized: table
+    raw:
+      +materialized: table
+      +database: 'DBT_SCHEMA'
+      +schema: 'RAW_SCHEMA'
+      +transient: false
+      +query_tag: 'DBT_RAW'
+    silver:
+      +materialized: table
+      +database: 'DBT_SCHEMA'
+      +schema: 'SILVER_SCHEMA'
+      +transient: false
+      +query_tag: 'DBT_SILVER'
