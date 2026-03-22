@@ -1,0 +1,33 @@
+sources:
+  - name: raw_data
+    database: snowflake_dbt_data
+    schema: sf_schema
+    tables:
+      - name: cust # logical name
+        identifier: customer
+  - name: prod_data
+    database: snowflake_dbt_data
+    schema: prod_sch
+    tables:
+      - name: prod
+        identifier: product
+  - name: data_feed
+    database: dbt_db
+    schema: raw_schema
+    tables:
+      - name: customer
+        identifier: raw_customer
+      - name: orders
+        identifier: raw_orders
+  - name: SF_SCHEMA
+    database: dbt_labs
+    schema: sf_schema
+    tables:
+      - name: cust
+        identifier: customer
+  - name: PROD_SCH
+    database: dbt_labs
+    schema: prod_sch
+    tables:
+      - name: product
+      - name: delivery_status_fact

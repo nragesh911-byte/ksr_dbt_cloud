@@ -42,13 +42,11 @@ models:
       +materialized: table
     raw:
       +materialized: table
-      +database: 'DBT_DB'
+      +database: 'DBT_LABS'
       +schema: 'RAW_SCHEMA'
       +transient: false
       +query_tag: 'DBT_RAW'
     silver:
       +materialized: table
-      +database: 'DBT_DB'
-      +schema: 'SILVER_SCHEMA'
-      +transient: false
-      +query_tag: 'DBT_SILVER'
+    gold:
+      +materialized: view

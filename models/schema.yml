@@ -1,0 +1,9 @@
+sources:
+  - name: SF_SCHEMA
+    tables:
+      - name: CUSTOMER
+  - name: PROD_SCH
+    tables:
+      - name: PRODUCT
+      - name: DELIVERY_STATUS_FACT
+       

@@ -14,6 +14,6 @@ SELECT
     p.CATEGORY,
     p.PRICE,
     p.PURCHASE_DATE
-FROM snowflake_dbt_data.sf_schema.customer c
-JOIN snowflake_dbt_data.prod_sch.product p
+FROM {{ source('raw_data', 'cust') }} c
+JOIN {{ source('prod_data', 'prod') }} p
     ON c.CUSTOMER_ID = p.CUSTOMER_ID
