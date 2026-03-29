@@ -48,5 +48,9 @@ models:
       +query_tag: 'DBT_RAW'
     silver:
       +materialized: table
+      +database: DBT_LABS
+      +schema: silver_sch
     gold:
       +materialized: view
+      +database: DBT_CLEAN
+      +schema: clean_schema

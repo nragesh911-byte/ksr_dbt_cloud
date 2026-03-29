@@ -1,9 +1,7 @@
-sources:
-  - name: SF_SCHEMA
-    tables:
-      - name: CUSTOMER
-  - name: PROD_SCH
-    tables:
-      - name: PRODUCT
-      - name: DELIVERY_STATUS_FACT
-       
+models:
+  - name: product_delivery_info
+    description: Silver layer table enriching product and customer data with delivery status. 
+                  Cleans categories and standardizes dates.
+  - name: product_delivery_report
+    description: Gold layer view for final customer-product delivery reporting. 
+                  Filters out pending statuses and flags successful deliveries.
